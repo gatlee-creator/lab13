@@ -31,8 +31,6 @@ int main()
 
     stack = newStack; //refill
 
-    cout << stack.top() << endl;
-
     cout << "reversing newStack using stack" << endl;
     stack.reverseStack(newStack);
 
