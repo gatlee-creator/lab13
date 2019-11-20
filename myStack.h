@@ -156,7 +156,7 @@ void stackType<Type>::reverseStack(stackType<Type> &otherStack)
     for(int i=0; i < END_OF_STACK; i++)
         otherStack.push(list[stackTop--]);
 
-    //reverse complete 
+    //NEED TO RESTORE O.G STACK
   }
 
 }//end reverseStack

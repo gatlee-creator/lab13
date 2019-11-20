@@ -25,12 +25,26 @@ int main()
     cout << "elements in stack: " << endl;
     while (!stack.isEmptyStack())
     {
+        cout << stack.top() << endl;	
+        stack.pop();
+    }
+
+    stack = newStack; //refill
+
+    cout << stack.top() << endl;
+
+    cout << "reversing newStack using stack" << endl;
+    stack.reverseStack(newStack);
+
+     cout << "After reversal of newStack: " 
+         << endl; 
+
+        //Output the elements of newStack
+    while (!newStack.isEmptyStack())
+    {
         cout << newStack.top() << endl;	
         newStack.pop();
     }
-
-    //stack = newStack; //refill
-
 
 
 //     cout << "After the assignment operator, newStack: " 

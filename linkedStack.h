@@ -172,18 +172,25 @@ void linkedStackType<Type>::reverseStack(linkedStackType<Type> &otherStack)
   }
   else
   {
-    int END_OF_STACK = stackTop;
-    //destroy the other list 
-    otherStack.initializeStack();
-    stackTop--; //lower down to real index 
+    otherStack.initializeStack(); //empty out other stack
 
-    //push elements from o.g stack onto other 
-    for(int i=0; i < END_OF_STACK; i++)
-        otherStack.push(this->list[stackTop--]);
+    //do the top node 
+    nodeType<Type> *temp = new nodeType<Type>;
 
+    temp->info = this->top();
+    otherStack.push(temp->info);
+    this->pop();
+
+    //now run through the rest of the list
+    while (stackTop != NULL)
+    {
+        temp->info = this->top();
+        otherStack.push(temp->info);
+        this->pop();
+    }
+    
     //reverse complete 
   }
-
 
 } //end reverseStack
 
