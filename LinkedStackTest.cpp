@@ -1,5 +1,10 @@
-//This program tests various operations of a linked stack
- 
+/*
+    Name: Graham Atlee
+    Course: csc1720
+    Date: 11/19/2019
+
+    This program tests various operations of a linked stack
+*/ 
 #include <iostream>
 #include "linkedStack.h"
    

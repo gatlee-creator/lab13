@@ -1,6 +1,10 @@
-//Header file: myStack.h
-//THIS CODE IS FOR THE ARRAY STACK
+/*
+    Name: Graham Atlee
+    Course: csc1720
+    Date: 11/19/2019
 
+    //Header file: myStack.h
+*/ 
 #ifndef H_StackType
 #define H_StackType
 

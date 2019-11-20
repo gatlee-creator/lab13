@@ -1,5 +1,10 @@
-//Program to test the various operations of a stack
+/*
+    Name: Graham Atlee
+    Course: csc1720
+    Date: 11/19/2019
 
+    Program to test the various operations of a stack
+*/ 
 #include <iostream>
 #include "myStack.h"
 
