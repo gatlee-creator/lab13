@@ -18,11 +18,16 @@ int main()
     stackType<int> copyStack(50);
     stackType<int> dummyStack(100);
 
+    cout << "Adding elements into stack" << endl;
+
     stack.initializeStack();
     stack.push(85);
     stack.push(28);
     stack.push(56);
+
+    cout << "using assignment operator to copy elements into copyStack" << endl;
     copyStack = stack;  //copy stack into copyStack
+    cout << endl;
 
     cout << "The elements of stack: ";
        while (!stack.isEmptyStack())  //print copyStack
@@ -38,7 +43,7 @@ int main()
     stack.reverseStack(copyStack);
 
 
-    cout << "The elements of copyStack: ";
+    cout << "After reversal of copyStack: ";
     while (!copyStack.isEmptyStack())  //print copyStack
     {
         cout << copyStack.top() << " ";
