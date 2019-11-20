@@ -18,6 +18,8 @@ int main()
     linkedStackType<int> otherStack;
     linkedStackType<int> newStack;
 
+    cout << "Adding elements into stack" << endl;
+
         //Add elements into stack
     stack.push(28);
     stack.push(94);
@@ -25,7 +27,9 @@ int main()
 
         //Use the assignment operator to copy the elements
         //of stack into newStack
+    cout << "using assignment operator to copy elements into newStack" << endl;
     newStack = stack;
+    cout << endl;
 
     cout << "elements in stack: " << endl;
     while (!stack.isEmptyStack())
