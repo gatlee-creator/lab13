@@ -147,7 +147,12 @@ void stackType<Type>::reverseStack(stackType<Type> &otherStack)
   }
   else
   {
+    //first we need to preserve the o.g stack
+    stackType<Type> saveStack;
+    saveStack.copyStack(*this);
+    
     int END_OF_STACK = stackTop;
+
     //destroy the other list 
     otherStack.initializeStack();
     stackTop--; //lower down to real index 
@@ -156,7 +161,8 @@ void stackType<Type>::reverseStack(stackType<Type> &otherStack)
     for(int i=0; i < END_OF_STACK; i++)
         otherStack.push(list[stackTop--]);
 
-    //NEED TO RESTORE O.G STACK
+    //restore o.g stack
+    *this = saveStack;
   }
 
 }//end reverseStack

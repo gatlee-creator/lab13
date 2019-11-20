@@ -40,32 +40,13 @@ int main()
         copyStack.pop();
     }
     cout << endl;
-//
-//     copyStack = stack;
-//     testCopyConstructor(stack);  //test the copy constructor
-//
-//     if (!stack.isEmptyStack())
-//         cout << "The original stack is not empty." << endl
-//              << "The top element of the original stack: "
-//              << copyStack.top() << endl;
-//
-//     dummyStack = stack;  //copy stack into dummyStack
-//
-//     cout << "The elements of dummyStack: ";
-//     while (!dummyStack.isEmptyStack())  //print dummyStack
-//     {
-//         cout << dummyStack.top() << " ";
-//         dummyStack.pop();
-//     }
-//     cout << endl;
-//
-//     return 0;
-// }
-//
-// void testCopyConstructor(stackType<int> otherStack)
-// {
-//     if (!otherStack.isEmptyStack())
-//         cout << "otherStack is not empty." << endl
-//              << "The top element of otherStack: "
-//              << otherStack.top() << endl;
+
+    cout << "checking if stack is unchanged" << endl;
+    cout << "elements in stack: " <<endl;
+    while (!stack.isEmptyStack())  //print copyStack
+    {
+        cout << stack.top() << " ";
+        stack.pop();
+    }
+    cout << endl;
 }
