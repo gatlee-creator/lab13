@@ -172,6 +172,11 @@ void linkedStackType<Type>::reverseStack(linkedStackType<Type> &otherStack)
   }
   else
   {
+    //first we need to preserve the o.g stack
+    linkedStackType<Type> saveStack;
+    saveStack.copyStack(*this);
+
+
     otherStack.initializeStack(); //empty out other stack
 
     //do the top node 
@@ -189,7 +194,7 @@ void linkedStackType<Type>::reverseStack(linkedStackType<Type> &otherStack)
         this->pop();
     }
     
-    //reverse complete 
+    *this = saveStack; //restore o.g stack 
   }
 
 } //end reverseStack
